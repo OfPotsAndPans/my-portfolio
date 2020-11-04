@@ -1,17 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
     <title>Sam's Website</title>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js" type="text/javascript"></script>
+    <script src="http://bitstorm.org/jquery/color-animation/jquery.animate-colors.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.js" type="text/javascript"></script>
+    <link href='http://fonts.googleapis.com/css?family=Bowlby+One+SC' rel='stylesheet' type='text/css'>
+    <script>
+        var oneeeee = true;
+
+    </script>
+    <script type="text/javascript">
+        //                $(document).ready(function() {
+        // var oneeeee = true;
+        // })
+
+        let oneeeee = false;
+        alert(oneeeee);
+
+        function blink() {
+
+            if (oneeeee == true) {
+                alert("inside " + oneeeee);
+                $(".main-h1")
+                    .animate({
+                        color: '#FF0000'
+                    }, 150)
+                    .animate({
+                        color: '#FF9500'
+                    }, 150)
+                    .animate({
+                        color: '#FFD200'
+                    }, 150)
+                    .animate({
+                        color: '#74E600'
+                    }, 150)
+                    .animate({
+                        color: '#1049A9'
+                    }, 150)
+                    .animate({
+                        color: '#4212AF'
+                    }, 150)
+                    .animate({
+                        color: '#A600A6'
+                    }, 150, function() {
+
+                        blink()
+                    });
+            } else {
+                alert("break");
+                return;
+
+            }
+        }
+
+        function showWhite() {
+
+//            $(".main-h1").fadeIn("fast");
+            //            ($(".main-h1").mouseout(
+            // return);
+            //                break;
+            //            }
+            //            break;
+//            var oneeeee = false;
+       // alert("OUT!" + oneeeee);
+        }
+
+        // function hideWhite() {
+        // $(".main-h1-2").fadeOut("fast");
+        // }
+
+    </script>
+
+
 </head>
+
+
 
 <div class="main">
 
     <body>
-        <div class="sidenav">
+
+        <nav class="sidenav">
             <div>
                 <a href='/' class="nav-title">SALAM<br>
                     <div class="tab">BDEIR</div>
@@ -24,26 +98,48 @@
             <a href="ProjectLogs.html" ; class="pl-list-bg-colors">My Projects</a>
             <a href="underconstruction.html" ; class="pl-list-bg-colors">My CV</a>
             <a href="underconstruction.html" ; class="pl-list-bg-colors">Contact me</a>
-        </div>
+        </nav>
 
-        <h1 style="color:rgb(136, 47, 143);font-size:32px; font-style:bold; text-align:center; padding-top: 55px;"> Software Developer // Front End Web Developer </h1>
 
-<!--
-        <p style="color:rgb(252, 242, 250);font-size:12px; font-weight:normal;text-align:center;">You have stumbled upon my corner of the internet, featuring my current projects, past projects, and future project ideas.
-        </p>
+        <!--
+        <div class="container"></div>
+        <div class="white"></div>
 -->
-        <h3>//Reach Out To Me</h3>
-        <p style="color:rgb(252, 242, 250);font-size:24px; font-weight:normal;text-align:center;">
-            I am always looking for new projects work on. I enjoy talking about problems people are facing and what kinds of solutions we can create to help solve them. If you have anything exciting you are working on, want to talk about your next idea, or just need a second pair of eyes on something, shoot me a <a href="https://www.foryoureyesonly.cf/underconstruction/" target="_blank">message.</a> </p>
-        <br>
-        
-<!--        <p style="color:rgb(252, 242, 250);font-size:12px; font-weight:normal;text-align:center;"> //A Little About Me</p>-->
-        <div style="position: relative">
-            <p style="position: fixed; bottom: 0; width:100%; color:rgb(252, 242, 250);font-size:11px;"> Next planned update is to create a button on my site that will allow users to trigger LEDs at my desk to say hi to me in real time.</p>
-        </div>
 
+
+        <header>
+            <a class="main-h1" onmouseenter="blink(true)" onmouseout="showWhite()">
+                Software Developer // Web Developer
+            </a>
+
+            <!--
+        <p style=" color:rgb(252, 242, 250);font-size:12px; font-weight:normal;text-align:center;">You have stumbled upon my corner of the internet, featuring my current projects, past projects, and future project ideas.
+                </p>
+                -->
+        </header>
+
+        <section style="padding-top: 30px">
+            <h3>//Reach Out To Me</h3>
+        </section>
+        <section>
+            <div class="center">
+                <img src="images/me.JPG" style="width:360px;height:390px;float: right; padding-right: 260px; ">
+                <p style="color:rgb(252, 242, 250);font-size:24px; margin-right: 650px; font-weight:normal;text-align:left; padding-top: 10px; ">
+                    I am always looking for new projects work on. I enjoy talking about problems people are facing and what kinds of solutions we can create to help solve them. If you have anything exciting you are working on, want to talk about your next idea, or just need a second pair of eyes on something, shoot me a <a href="mailto:bdeira@easternct.edu"> message</a>.
+                </p>
+            </div>
+        </section>
+        <br>
+
+        <!--        <p style="color:rgb(252, 242, 250);font-size:12px; font-weight:normal;text-align:center;"> //A Little About Me</p>-->
+        <footer>
+            <div style="position: relative">
+                <p style="position: fixed; bottom: 0; width:100%; color:rgb(252, 242, 250);font-size:11px;"> Next planned update is to create a button on my site that will allow users to trigger LEDs at my desk to say hi to me in real time.</p>
+            </div>
+        </footer>
     </body>
 
 </div>
+
 
 </html>
